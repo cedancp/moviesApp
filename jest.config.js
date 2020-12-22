@@ -1,5 +1,3 @@
-
-
 module.exports = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
@@ -15,4 +13,5 @@ module.exports = {
     '\\.(jpg|jpeg|png|gif)$': '<rootDir>/__mocks__/imageMock.js',
   },
   preset: 'react-native',
+  setupFiles: ['<rootDir>/jest/setup.js'],
 };
