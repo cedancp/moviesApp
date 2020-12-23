@@ -16,6 +16,6 @@ it('renders correctly', async () => {
 it('should render Home screen by default', async () => {
   const {getByText} = render(<App />);
   await waitFor(() => {
-    getByText('Home');
+    getByText('Pop Movies');
   });
 });

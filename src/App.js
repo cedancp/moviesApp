@@ -14,7 +14,7 @@ import Navigator from './routes/Navigator';
 const App: () => React$Node = () => {
   return (
     <NavigationContainer>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" />
       <Navigator />
     </NavigationContainer>
   );
