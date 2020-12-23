@@ -20,8 +20,8 @@ const HomeScreen = ({navigation}) => {
     getMovies();
   }, []);
 
-  const goToMovieDetail = () => {
-    navigation.navigate('MovieDetail');
+  const goToMovieDetail = (movie) => {
+    navigation.navigate('MovieDetail', {movieId: movie.id});
   };
 
   const renderMovie = ({item: movie}) => {
@@ -29,10 +29,10 @@ const HomeScreen = ({navigation}) => {
       <TouchableOpacity
         testID="movie-item"
         style={styles.movieContainer}
-        onPress={goToMovieDetail}>
+        onPress={() => goToMovieDetail(movie)}>
         <Image
           style={styles.movieImage}
-          resizeMode="center"
+          resizeMode="cover"
           source={{uri: movie.coverUrl}}
         />
       </TouchableOpacity>

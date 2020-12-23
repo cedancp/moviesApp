@@ -1,6 +1,7 @@
 import React from 'react';
-import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import {createStackNavigator} from '@react-navigation/stack';
+import HomeScreen from '../screens/HomeScreen/HomeScreen';
+import MovieDetail from '../screens/MovieDetail/MovieDetail';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,14 @@ const Navigator = () => {
         component={HomeScreen}
         options={{
           title: 'Pop Movies',
+        }}
+      />
+      <Stack.Screen
+        name="MovieDetail"
+        component={MovieDetail}
+        options={{
+          title: 'Movie details',
+          headerBackTitleVisible: false,
         }}
       />
     </Stack.Navigator>

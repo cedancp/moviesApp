@@ -65,7 +65,9 @@ describe('Home Screen', () => {
     });
 
     expect(mockNavigate).toHaveBeenCalledTimes(1);
-    expect(mockNavigate).toHaveBeenCalledWith('MovieDetail');
+    expect(mockNavigate).toHaveBeenCalledWith('MovieDetail', {
+      movieId: mockMoviesData[0].id,
+    });
   });
 
   it('should show loader while getting movies', async () => {
